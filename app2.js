@@ -4,10 +4,10 @@ $(document).ready(function () {
 	promise.done(function(results) {
 
 		$.each(results, function (ind, obj) {
-			console.log(obj.name);
-			$('.container').append("<div class='col-md-4'>" 
+			// compile json objects and render to dom
+			$('.col-md-12').append("<div class='col-md-3 well margin45'>" 
 				+ "<h3>" + obj.name + "</h3>"
-				+ "<img src='" + obj.photo + "'</>"
+				+ "<img class='margin-bottom10' src='" + obj.photo + "'</>"
 				+ "<p>" + obj.description + "</p>"
 				+ "</div>");
 		});
