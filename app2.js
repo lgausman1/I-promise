@@ -1,6 +1,7 @@
 $(document).ready(function () {
-
-	var promise = $.getJSON('kitties.json');
+	
+	// jQuery's get returns a promise!
+	var promise = $.get('kitties.json');
 	promise.done(function(results) {
 
 		$.each(results, function (ind, obj) {
